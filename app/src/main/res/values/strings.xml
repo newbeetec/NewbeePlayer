@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NewBee音乐播放器</string>
+    <string name="open_music">打开音频文件</string>
+    <string name="loop">循环播放</string>
+    <string name="earpiece">通话模式</string>
+    <string name="current_time">--:--</string>
+    <string name="total_time">--:--</string>
+</resources>

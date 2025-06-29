@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 频谱视图 -->
+
+        <!-- 播放控制 -->
+
+        <com.newbeetec.newbeeplayer.FFTView  android:background="#D0FFFFFF"
+            android:id="@+id/fftView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginVertical="40dp" />
+
+        <!-- 进度条 -->
+        <LinearLayout android:background="#C0FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRewind"
+                style="@style/ControlButton"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                app:icon="@drawable/ic_rewind"
+                app:iconTint="#0090FF" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPlayPause"
+                style="@style/ControlButton"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:layout_marginHorizontal="24dp"
+                app:icon="@drawable/ic_play"
+                app:iconTint="#0090FF" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnForward"
+                style="@style/ControlButton"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                app:icon="@drawable/ic_forward"
+                app:iconTint="#0090FF" />
+        </LinearLayout>
+
+        <LinearLayout android:background="#C0FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvCurrentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/current_time"
+                android:textColor="#454545"
+                android:textSize="14sp"/>
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="8dp"
+                android:progressTint="#0090FF"
+                android:thumbTint="#0090FF"/>
+
+            <TextView
+                android:id="@+id/tvTotalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_time"
+                android:textColor="#454545"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!-- 控制选项 -->
+        <LinearLayout  android:background="#C0FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loop"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <Switch
+                android:id="@+id/switchLoop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumbTint="#0090FF"
+                android:trackTint="#0090FF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/earpiece"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="8dp"/>
+
+            <Switch
+                android:id="@+id/switchEarpiece"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumbTint="#0090FF"
+                android:trackTint="#0090FF"/>
+        </LinearLayout>
+
+        <!-- 音量控制 -->
+        <LinearLayout android:background="#C0FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/ic_volume"
+                app:tint="#0090FF"/>
+
+            <SeekBar
+                android:id="@+id/seekVolume"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:max="100"
+                android:progressTint="#0090FF"
+                android:thumbTint="#0090FF"/>
+        </LinearLayout>
+
+        <!-- 打开文件按钮 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/open_music"
+            android:layout_marginTop="24dp"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#0090FF"
+            app:cornerRadius="8dp"/>
+    </LinearLayout>
+</ScrollView>

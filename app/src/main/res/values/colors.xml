@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#0090FF</color>
+    <color name="primary_dark">#33AACC</color>
+    <color name="spectrum_line">#1BA1E6</color>
+    <color name="grid_line">#80595959</color>
+</resources>
